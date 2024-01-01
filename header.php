@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'versa' ); ?></a>
 
 	<header id="masthead" class="site-header py-4 col-span-4 grid grid-cols-4 lg:flex justify-between gap-4 lg:gap-56 items-center">
-		<div class="site-branding grid col-span-3 text-center">
+		<div class="site-branding grid col-span-3">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -56,8 +56,8 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-					'menu_class'	=> 'flex flex-col gap-4 w-full ',
-					'container_class' => 'menu-container hidden fixed bg-white py-32 !px-4 left-0 top-0 bottom-0 w-full z-40 text-right overflow-y-scroll'
+					'menu_class'	=> 'flex flex-col gap-4 w-full max-h-full overflow-y-scroll',
+					'container_class' => 'menu-container hidden fixed bg-white py-24 !px-4 left-0 top-0 bottom-0 w-full z-40 text-right'
 
 					// position: fixed;
 					// left: 0;

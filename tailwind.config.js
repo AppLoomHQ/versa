@@ -41,14 +41,18 @@ module.exports = {
           display: 'flex',
           'li': {
             'a': {
-              fontSize: '1rem'
+              fontSize: '1.25rem'
             }
           },
           '.sub-menu': {
-            paddingRight: '1rem',
+            paddingRight: '1.5rem',
+            marginTop: '1rem',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
             'li': {
               'a': {
-                fontSize: '1rem'
+                fontSize: '1.25rem'
               }
             }
           }

@@ -6,6 +6,7 @@
  */
 ( function() {
 	const siteNavigation = document.getElementById( 'site-navigation' );
+	const siteBody = document.getElementsByTagName( 'body' )[ 0 ];
 
 	// Return early if the navigation doesn't exist.
 	if ( ! siteNavigation ) {
@@ -34,6 +35,8 @@
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
+		siteBody.classList.toggle( 'overflow-hidden' );
+
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
@@ -87,7 +90,7 @@
 
 		if ( event.type === 'touchstart' ) {
 			const menuItem = this.parentNode;
-			event.preventDefault();
+			// event.preventDefault();
 			for ( const link of menuItem.parentNode.children ) {
 				if ( menuItem !== link ) {
 					link.classList.remove( 'focus' );
