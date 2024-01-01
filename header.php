@@ -22,10 +22,10 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
+<div id="page" class="site container mx-auto grid grid-cols-4 gap-16">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'versa' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header col-span-4">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
