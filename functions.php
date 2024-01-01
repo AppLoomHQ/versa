@@ -141,6 +141,8 @@ function versa_scripts() {
 	wp_enqueue_style( 'versa-style', get_stylesheet_uri(), array(), VERSA_VERSION );
 	wp_style_add_data( 'versa-style', 'rtl', 'replace' );
 
+	wp_enqueue_style( 'versa-tailwind-style', get_template_directory_uri() . '/tailwind.dist.css', array(), VERSA_VERSION );
+
 	wp_enqueue_script( 'versa-navigation', get_template_directory_uri() . '/js/navigation.js', array(), VERSA_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
