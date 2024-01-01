@@ -31,7 +31,7 @@ Installation
 
 ### Setup
 
-To start using all the tools that come with `_s`  you need to install the necessary Node.js and Composer dependencies :
+To start using all the tools that come with `versa`  you need to install the necessary Node.js and Composer dependencies :
 
 ```sh
 $ composer install
