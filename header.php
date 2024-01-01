@@ -25,17 +25,17 @@
 <div id="page" class="site container mx-auto grid grid-cols-4 gap-x-16 gap-y-10">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'versa' ); ?></a>
 
-	<header id="masthead" class="site-header py-4 col-span-4 grid grid-cols-3 lg:flex justify-between gap-4 lg:gap-56 items-center">
-		<div class="site-branding grid grid-cols-subgrid col-span-2 text-center">
+	<header id="masthead" class="site-header py-4 col-span-4 grid grid-cols-4 lg:flex justify-between gap-4 lg:gap-56 items-center">
+		<div class="site-branding grid col-span-3 text-center">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title col-start-2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			else :
 				?>
-				<p class="site-title col-start-2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title "><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
 			$versa_description = get_bloginfo( 'description', 'display' );
@@ -46,8 +46,8 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation grid">
-			<button class="menu-toggle w-[48px] h-[48px] border-0 justify-self-end z-50" aria-controls="primary-menu" aria-expanded="false">
-				<svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[48px] h-[48px] stroke-1">
+			<button class="menu-toggle w-[32px] h-[32px] border-0 justify-self-end z-50" aria-controls="primary-menu" aria-expanded="false">
+				<svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[32px] h-[32px] stroke-1">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 				</svg>
 			</button>
@@ -56,7 +56,8 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
-					'menu_class'	=> 'hidden fixed flex-col gap-4 bg-white py-32 !px-4 left-0 top-0 w-full z-40 text-right overflow-y-scroll'
+					'menu_class'	=> 'flex flex-col gap-4 w-full ',
+					'container_class' => 'menu-container hidden fixed bg-white py-32 !px-4 left-0 top-0 bottom-0 w-full z-40 text-right overflow-y-scroll'
 
 					// position: fixed;
 					// left: 0;

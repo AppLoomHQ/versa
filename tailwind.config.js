@@ -37,18 +37,18 @@ module.exports = {
         //   }
         // },
        '.main-navigation': {
-        '&.toggled .nav-menu': {
+        '&.toggled .menu-container': {
           display: 'flex',
           'li': {
             'a': {
-              fontSize: '1.5rem'
+              fontSize: '1rem'
             }
           },
           '.sub-menu': {
             paddingRight: '1rem',
             'li': {
               'a': {
-                fontSize: '1.5rem'
+                fontSize: '1rem'
               }
             }
           }
